@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+:root{
+    --fontf-fraun: 'Fraunces', serif;
+    --fontf-mont: 'Montserrat', sans-serif;
+    --font-medium: 500;
+    --font-bold: 700;
+    --color-alt: hsl(158, 36%, 37%);
+    --color-alt-grey: hsl(228, 12%, 48%);
+    --color-alt-white: hsl(0, 0%, 100%);
+    --color-background: hsl(30, 38%, 92%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-background);
+    padding: 1rem;
+}
+p{
+    font-size: 14px;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 350px;
+}
+
+.card__image{
+    width: 100%;
+    overflow: hidden;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card__data {
+    background-color: var(--color-alt-white);
+    font-family: var(--fontf-mont);
+    padding: 1rem 2rem;
+    border-radius: 0 0 .5rem .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.card__data * {
+    margin: .7rem 0rem 0rem;
+}
+.card__type{
+    color: hsl(228, 12%, 48%);
+    font-size: .7rem;
+    letter-spacing: .2rem;
+    font-family: var(--fontf-mont);
+    font-weight: var(--font-medium);
+}
+.card__title{
+    color: hsl(212, 21%, 14%);
+    font-size: 2rem;
+    font-family: var(--fontf-fraun);
+    line-height: 2rem;
+}
+.card__description{
+    color: var(--color-alt-grey);
+    font-family: var(--fontf-mont);
+    font-weight: var(--font-medium);
+    font-size: .9rem;
+    line-height: 1.25rem;
+}
+.card__price{
+    display: flex;
+    align-items: center;
+}
+.card__price-discount{
+    color: var(--color-alt);
+    font-weight: var(--font-bold);
+    font-family: var(--fontf-fraun);
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.card__price-old{
+    color: var(--color-alt-grey);
+    font-size: .8rem;
+    text-decoration: line-through;
+}
+.card__button{
+    color: var(--color-alt-white);
+    background-color: var(--color-alt);
+    border-radius: .5rem;
+    border: 0px;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__button * {
+    margin: 0;
+    font-weight: var(--font-bold);
+}
+.card__button > i {
+    font-weight: var(--font-medium);
+    font-size: 1.10rem;
+    margin: 0 .3rem .3rem;
+}
+@media screen and (min-width: 1440px) {
+    .card{
+        width: 650px;
+        height: 500px;
+        font-size: 1.5rem;
+    }
+    .card * {
+        /* margin: 1.2rem 0rem 0rem; */
+    }
+    .card__image{
+        width: 350px;
+        height: 100%;
+        border-radius: .5rem 0 0 .5rem;
+    }
+    .card__data{
+        width: 300px;
+        height: 100%;
+        border-radius: 0 .5rem .5rem 0;
+    }
+    .card__type{
+        font-size: .6em;
+    }
+    .card__title{
+        line-height: 1em;
+        font-size: 1.5em;
+    }
+    .card__description{
+        font-size: .6em;
+        line-height: 1.7em;
+    }
+    .card__price-discount{
+        font-size: 2.5em;
+    }
+    .card__price-old{
+        font-size: 1.1em;
+    }
+    .card__button i,span {
+        font-size: 1.1em;
+    }
+    .card__button i {
+        font-size: 1.5em;
+    }
+}
