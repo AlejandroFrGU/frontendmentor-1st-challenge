@@ -28,7 +28,7 @@ p{
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    width: 350px;
+    max-width: 350px;
 }
 
 .card__image{
@@ -81,6 +81,11 @@ p{
     display: flex;
     align-items: center;
 }
+.sr-only{
+    position: absolute;
+    overflow: hidden;
+    width: 0px;
+}
 .card__price-discount{
     color: var(--color-alt);
     font-weight: var(--font-bold);
@@ -115,7 +120,7 @@ p{
 }
 @media screen and (min-width: 1440px) {
     .card{
-        width: 650px;
+        max-width: 650px;
         height: 500px;
         font-size: 1.5rem;
     }

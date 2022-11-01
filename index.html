@@ -14,6 +14,10 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <!-- 
+    - Añadido max a la width para mejorar responsividad en muy pequeños dispositivos.
+    - Añadido <span class="sr-only"> para mejorar accesibilidad de solo lectores
+   -->
 </head>
 <body>
   <div class="card">
@@ -22,14 +26,18 @@
       <img src="images/image-product-mobile.jpg" alt="perfume image">
     </picture>
     <div class="card__data">
-      <p class="card__type">PERFUME</p>
+      <p class="card__type"><span class="sr-only">type: </span>PERFUME</p>
       <h2 class="card__title">Gabrielle Essence Eau De Parfum</h2>
-      <p class="card__description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      <p class="card__description"><span class="sr-only">description: </span>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
         Perfumer-Creator for the House of CHANEL.</p>
       <p class="card__price">
-        <span class="card__price-discount">$149.99
+        <span class="card__price-discount" rol="new price">
+          $149.99
         </span>
-        <span class="card__price-old">$169.99</span>
+        <span class="card__price-old">
+        <span class="sr-only">Old price: </span>
+          $169.99</span>
+      </del>
       </p>
       <button class="card__button">
         <i class="ri-shopping-cart-2-line"></i> 
