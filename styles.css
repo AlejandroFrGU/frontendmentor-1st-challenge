@@ -5,6 +5,7 @@
     --font-medium: 500;
     --font-bold: 700;
     --color-alt: hsl(158, 36%, 37%);
+    --color-alt-green: hsl(158, 34%, 32%);
     --color-alt-grey: hsl(228, 12%, 48%);
     --color-alt-white: hsl(0, 0%, 100%);
     --color-background: hsl(30, 38%, 92%);
@@ -24,13 +25,16 @@ body{
 p{
     font-size: 14px;
 }
+footer{
+    position: fixed;
+    bottom: 0;
+}
 .card {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
     max-width: 350px;
 }
-
 .card__image{
     width: 100%;
     overflow: hidden;
@@ -39,11 +43,16 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+.card__image:hover img{
+    transform: scale(1.2) translateY(2rem);
+    height: 130%;
 }
 .card__image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    transition: 1s cubic-bezier(0.21, 0.85, 0.58, 1);
 }
 .card__data {
     background-color: var(--color-alt-white);
@@ -99,15 +108,18 @@ p{
     text-decoration: line-through;
 }
 .card__button{
+    cursor: pointer;
     color: var(--color-alt-white);
     background-color: var(--color-alt);
     border-radius: .5rem;
     border: 0px;
     padding: 1rem;
-    width: 100%;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
+}
+.card__button:hover {
+    background-color: var(--color-alt-green);
 }
 .card__button * {
     margin: 0;
@@ -116,7 +128,7 @@ p{
 .card__button > i {
     font-weight: var(--font-medium);
     font-size: 1.10rem;
-    margin: 0 .3rem .3rem;
+    margin: 0 .3rem;
 }
 @media screen and (min-width: 1440px) {
     .card{
@@ -161,3 +173,4 @@ p{
         font-size: 1.5em;
     }
 }
+/* If you got here have a congratulations have a 👻 */
